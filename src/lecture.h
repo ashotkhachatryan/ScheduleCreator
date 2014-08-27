@@ -1,10 +1,12 @@
 #ifndef LECTURE_H
 #define LECTURE_H
 
+#include <string>
+
 class Lecture
 {
 public:
-	Lecture();
+	Lecture(std::string pName, int pId);
 private:
 	std::string m_name;
 	int m_id;

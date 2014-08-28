@@ -1,5 +1,6 @@
 #include "schedule_table.h"
 #include "schedule_db.h"
+#include <map>
 
 ScheduleTable* ScheduleTable::m_instance = nullptr;
 
@@ -27,4 +28,10 @@ void
 ScheduleTable::Initialize()
 {
 	ScheduleDb* lScheduleDb = ScheduleDb::GetInstance();	
+	int n = lScheduleDb->GetClassroomsCount();
+	
+	for (int i = 0; i < n; i++) {
+		std::map<Teacher*, Lecture*> lTeacherLecture = 
+		lScheduleDb->GetTeacherLectureMapByClassroom(lScheduleDb->GetClassrooms()[i]);
+	}
 }

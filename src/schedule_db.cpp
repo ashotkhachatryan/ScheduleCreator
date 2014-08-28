@@ -1,4 +1,5 @@
 #include "schedule_db.h"
+#include <assert.h>
 
 ScheduleDb* ScheduleDb::m_instance = nullptr;
 
@@ -27,6 +28,36 @@ ScheduleDb::Initialize()
 	LectureInitialize();
 	TeacherInitialize();
 	SetRelation();
+}
+
+int
+ScheduleDb::GetClassroomsCount() const
+{
+	assert(m_classrooms.size() != 0);
+	return m_classrooms.size();
+}
+
+const std::vector<Teacher*>& 
+ScheduleDb::GetTeachers() const
+{
+	return m_teachers;
+}
+
+const std::vector<Classroom*>& 
+ScheduleDb::GetClassrooms() const
+{
+	return m_classrooms;
+}
+
+const std::vector<Lecture*>& 
+ScheduleDb::GetLectures() const
+{
+	return m_lectures;
+}
+
+std::map<Teacher*, Lecture*>
+ScheduleDb::GetTeacherLectureMapByClassroom(const Classroom* pClassroom) const
+{
 }
 
 void

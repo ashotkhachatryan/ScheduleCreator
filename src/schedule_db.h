@@ -5,12 +5,18 @@
 #include "classroom.h"
 #include "lecture.h"
 #include <vector>
+#include <map>
 
 class ScheduleDb
 {
 public:
 	void Initialize();
 	static ScheduleDb* GetInstance();
+	int GetClassroomsCount() const;
+	const std::vector<Teacher*>& GetTeachers() const;
+	const std::vector<Classroom*>& GetClassrooms() const;
+	const std::vector<Lecture*>& GetLectures() const;
+  std::map<Teacher*, Lecture*> GetTeacherLectureMapByClassroom(const Classroom* pClassroom) const;
 private:
 	ScheduleDb();
 private:

@@ -1,5 +1,12 @@
 #include "teacher.h"
 
+TeacherEmployment::TeacherEmployment(Classroom* pClassroom, Lecture* pLecture, int pCount)
+	: m_classroom(pClassroom)
+	, m_lecture(pLecture)
+	, m_count(pCount)
+{
+}
+
 Teacher::Teacher(std::string pName, int pId)
 	: m_name(pName)
 	, m_id(pId)
@@ -7,13 +14,7 @@ Teacher::Teacher(std::string pName, int pId)
 }
 
 void
-Teacher::SetClassrooms(const std::map<Classroom*, int>& pClassrooms)
+Teacher::SetTeacherEmployment(const std::vector<TeacherEmployment*> pTeacherEmployment)
 {
-	m_classrooms = pClassrooms;
-}
-
-void
-Teacher::SetLectures(const std::map<Lecture*, int>& pLectures)
-{
-	m_lectures = pLectures;
+	m_teacherEmployment = pTeacherEmployment;
 }

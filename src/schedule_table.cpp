@@ -1,4 +1,5 @@
 #include "schedule_table.h"
+#include "schedule_db.h"
 
 ScheduleTable* ScheduleTable::m_instance = nullptr;
 
@@ -25,4 +26,5 @@ ScheduleTable::operator() (int pIndex1, int pIndex2)
 void
 ScheduleTable::Initialize()
 {
+	ScheduleDb* lScheduleDb = ScheduleDb::GetInstance();	
 }

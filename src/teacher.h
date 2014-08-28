@@ -3,20 +3,28 @@
 
 #include "lecture.h"
 #include "classroom.h"
-#include <map>
+#include <vector>
 #include <string>
+
+struct TeacherEmployment
+{
+public:
+	TeacherEmployment(Classroom* pClassroom, Lecture* pLecture, int pCount);
+private:
+	Classroom* m_classroom;
+	Lecture* m_lecture;
+	int m_count;
+};
 
 class Teacher
 {
 public:
 	Teacher(std::string pName, int pId);
-	void SetLectures(const std::map<Lecture*, int>& pLecture);
-	void SetClassrooms(const std::map<Classroom*, int>& pLecture);
+	void SetTeacherEmployment(const std::vector<TeacherEmployment*> pTeacherEmployment);
 private:
 	std::string m_name;
 	int m_id;
-	std::map<Lecture*, int> 	m_lectures;
-	std::map<Classroom*, int> m_classrooms;
+	std::vector<TeacherEmployment*> m_teacherEmployment;
 };
 
 #endif

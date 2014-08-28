@@ -73,53 +73,63 @@ ScheduleDb::TeacherInitialize()
 void
 ScheduleDb::SetRelation()
 {
-  m_teachers[0]->SetClassrooms({{m_classrooms[0], 6}, 
-																{m_classrooms[1], 3}, 
-																{m_classrooms[2], 5}, 
-																{m_classrooms[4], 1}});
-  m_teachers[0]->SetLectures({{m_lectures[0], 15}});
+	m_teachers[0]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[0], m_lectures[0], 6), 
+																			new TeacherEmployment(m_classrooms[1], m_lectures[0], 3), 
+																			new TeacherEmployment(m_classrooms[2], m_lectures[0], 5), 
+																			new TeacherEmployment(m_classrooms[4], m_lectures[0], 1), 
+																			});
 
-  m_teachers[1]->SetClassrooms({{m_classrooms[0], 3}, 
-																{m_classrooms[2], 2}, 
-																{m_classrooms[1], 5}});
-  m_teachers[1]->SetLectures({{m_lectures[1], 10}});
+	m_teachers[1]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[0], m_lectures[1], 3), 
+																			new TeacherEmployment(m_classrooms[2], m_lectures[1], 2), 
+																			new TeacherEmployment(m_classrooms[1], m_lectures[1], 5), 
+																			});
 
-  m_teachers[2]->SetClassrooms({{m_classrooms[2], 6}, 
-																{m_classrooms[1], 4}, 
-																{m_classrooms[3], 5}, 
-																{m_classrooms[4], 3}});
-  m_teachers[2]->SetLectures({{m_lectures[2], 18}});
+	m_teachers[2]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[2], m_lectures[2], 6), 
+																			new TeacherEmployment(m_classrooms[1], m_lectures[2], 4), 
+																			new TeacherEmployment(m_classrooms[3], m_lectures[2], 5), 
+																			new TeacherEmployment(m_classrooms[4], m_lectures[2], 3), 
+																			});
 
-  m_teachers[3]->SetClassrooms({{m_classrooms[0], 3}, 
-																{m_classrooms[4], 4}});
-  m_teachers[3]->SetLectures({{m_lectures[3], 7}});
+	m_teachers[3]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[0], m_lectures[3], 3), 
+																			new TeacherEmployment(m_classrooms[4], m_lectures[3], 4), 
+																			});
 
-  m_teachers[4]->SetClassrooms({{m_classrooms[2], 4}, 
-														{m_classrooms[1], 5}, 
-														{m_classrooms[3], 5}});
-  m_teachers[4]->SetLectures({{m_lectures[4], 14}});
+	m_teachers[4]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[2], m_lectures[4], 4), 
+																			new TeacherEmployment(m_classrooms[1], m_lectures[4], 5), 
+																			new TeacherEmployment(m_classrooms[3], m_lectures[4], 5), 
+																			});
 
-  m_teachers[5]->SetClassrooms({{m_classrooms[3], 6}, 
-														{m_classrooms[4], 4}, 
-														{m_classrooms[0], 3}, 
-														{m_classrooms[2], 5}});
-  m_teachers[5]->SetLectures({{m_lectures[5], 18}});
+	m_teachers[5]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[3], m_lectures[5], 6), 
+																			new TeacherEmployment(m_classrooms[4], m_lectures[5], 4), 
+																			new TeacherEmployment(m_classrooms[0], m_lectures[5], 3), 
+																			new TeacherEmployment(m_classrooms[2], m_lectures[5], 5), 
+																			});
 
-  m_teachers[6]->SetClassrooms({{m_classrooms[0], 3}, 
-														{m_classrooms[4], 4}, 
-														{m_classrooms[1], 6}});
-  m_teachers[6]->SetLectures({{m_lectures[6], 13}});
+	m_teachers[6]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[0], m_lectures[6], 3), 
+																			new TeacherEmployment(m_classrooms[4], m_lectures[6], 4), 
+																			new TeacherEmployment(m_classrooms[1], m_lectures[6], 6), 
+																			});
 
-  m_teachers[7]->SetClassrooms({{m_classrooms[0], 2}, 
-														{m_classrooms[3], 4}});
-  m_teachers[7]->SetLectures({{m_lectures[7], 6}});
+	m_teachers[7]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[0], m_lectures[7], 2), 
+																			new TeacherEmployment(m_classrooms[3], m_lectures[7], 4), 
+																			});
 
-  m_teachers[8]->SetClassrooms({{m_classrooms[4], 6}, 
-														{m_classrooms[3], 3}, 
-														{m_classrooms[0], 5}});
-  m_teachers[8]->SetLectures({{m_lectures[8], 14}});
+	m_teachers[8]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[4], m_lectures[8], 6), 
+																			new TeacherEmployment(m_classrooms[3], m_lectures[8], 3), 
+																			new TeacherEmployment(m_classrooms[0], m_lectures[8], 5), 
+																			});
 
-  m_teachers[9]->SetClassrooms({{m_classrooms[4], 5}, 
-														{m_classrooms[3], 5}});
-  m_teachers[9]->SetLectures({{m_lectures[9], 10}});
+	m_teachers[9]->SetTeacherEmployment({
+																			new TeacherEmployment(m_classrooms[4], m_lectures[9], 5), 
+																			new TeacherEmployment(m_classrooms[3], m_lectures[9], 5), 
+																			});
 }

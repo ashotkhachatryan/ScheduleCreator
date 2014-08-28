@@ -16,10 +16,10 @@ ScheduleTable::GetInstance()
 	return m_instance;
 }
 
-HourInfo
+ScheduleEntry
 ScheduleTable::operator() (int pIndex1, int pIndex2)
 {
-	return HourInfoArray[pIndex1][pIndex2];
+	return ScheduleEntryArray[pIndex1][pIndex2];
 }
 
 void

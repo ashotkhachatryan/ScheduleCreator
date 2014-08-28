@@ -1,14 +1,14 @@
-#ifndef HOUR_INFO_H
-#define HOUR_INFO_H
+#ifndef SCHEDULE_ENTRY_H
+#define SCHEDULE_ENTRY_H
 
 #include "teacher.h"
 #include "classroom.h"
 #include "lecture.h"
 
-class HourInfo
+class ScheduleEntry
 {
 public:
-	HourInfo(const Teacher* pTeacher, const Classroom* pClassroom, const Lecture* pLecture);
+	ScheduleEntry(const Teacher* pTeacher, const Classroom* pClassroom, const Lecture* pLecture);
 private:
 	const Teacher* 		m_teacher;
 	const Classroom* 	m_classroom;

@@ -1,18 +1,18 @@
 #ifndef SCHEDULE_TABLE_Y
 #define SCHEDULE_TABLE_Y
 
-#include "hour_info.h"
+#include "schedule_entry.h"
 
 class ScheduleTable
 {
 public:
-	HourInfo operator() (int pIndex1, int pIndex2);
+	ScheduleEntry operator() (int pIndex1, int pIndex2);
 	static ScheduleTable* GetInstance();
 private:
 	ScheduleTable();
 	void Initialize();
 private:
-	HourInfo* HourInfoArray[];
+	ScheduleEntry* ScheduleEntryArray[];
 	static ScheduleTable* m_instance;
 };
 

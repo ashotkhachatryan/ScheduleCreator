@@ -1,5 +1,5 @@
-#ifndef SCHEDULEDB_H
-#define SCHEDULEDB_H
+#ifndef SCHEDULE_DB_H
+#define SCHEDULE_DB_H
 
 #include "teacher.h"
 #include "classroom.h"

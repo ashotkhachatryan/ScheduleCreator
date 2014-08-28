@@ -1,7 +1,18 @@
 #include "scheduledb.h"
 
+ScheduleDb* ScheduleDb::m_instance = nullptr;
+
 ScheduleDb::ScheduleDb()
 {
+}
+
+ScheduleDb*
+ScheduleDb::GetInstance()
+{
+	if (m_instance == nullptr) {
+		m_instance = new ScheduleDb();
+	}
+	return m_instance;
 }
 
 /**

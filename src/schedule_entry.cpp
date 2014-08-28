@@ -1,4 +1,4 @@
-#include "schedul_entry.h"
+#include "schedule_entry.h"
 
 ScheduleEntry::ScheduleEntry(const Teacher* pTeacher, const Classroom* pClassroom, const Lecture* pLecture)
 	: m_teacher(pTeacher)

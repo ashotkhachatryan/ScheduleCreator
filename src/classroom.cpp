@@ -5,3 +5,9 @@ Classroom::Classroom(std::string pName, int pId)
 	, m_id(pId)
 {
 }
+
+int
+Classroom::GetId() const
+{
+	return m_id;
+}

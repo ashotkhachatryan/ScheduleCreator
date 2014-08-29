@@ -6,13 +6,13 @@
 class ScheduleTable
 {
 public:
-	ScheduleEntry operator() (int pIndex1, int pIndex2);
+	ScheduleEntry operator() (int pIndex1, int pIndex2, int pIndex3);
 	static ScheduleTable* GetInstance();
 private:
 	ScheduleTable();
 	void Initialize();
 private:
-	ScheduleEntry* ScheduleEntryArray[];
+	std::vector<std::vector<std::vector<ScheduleEntry>>> ScheduleEntryArray;
 	static ScheduleTable* m_instance;
 };
 

@@ -10,6 +10,9 @@ struct TeacherEmployment
 {
 public:
 	TeacherEmployment(Classroom* pClassroom, Lecture* pLecture, int pCount);
+	int GetCount() const;
+	const Classroom* GetClassroom() const;
+	const Lecture* GetLecture() const;
 private:
 	Classroom* m_classroom;
 	Lecture* m_lecture;
@@ -21,6 +24,7 @@ class Teacher
 public:
 	Teacher(std::string pName, int pId);
 	void SetTeacherEmployment(const std::vector<TeacherEmployment*> pTeacherEmployment);
+	std::vector<TeacherEmployment*> GetTeacherEmployment() const;
 private:
 	std::string m_name;
 	int m_id;

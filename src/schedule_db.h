@@ -13,10 +13,12 @@ public:
 	void Initialize();
 	static ScheduleDb* GetInstance();
 	int GetClassroomsCount() const;
-	const std::vector<Teacher*>& GetTeachers() const;
-	const std::vector<Classroom*>& GetClassrooms() const;
-	const std::vector<Lecture*>& GetLectures() const;
-  std::map<Teacher*, Lecture*> GetTeacherLectureMapByClassroom(const Classroom* pClassroom) const;
+	int GetTeachersCount() const;
+	const std::vector<Teacher*> GetTeachers() const;
+	const std::vector<Classroom*> GetClassrooms() const;
+	const std::vector<Lecture*> GetLectures() const;
+	static int DayCount;
+	static int HourCount;
 private:
 	ScheduleDb();
 private:

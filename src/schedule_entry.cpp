@@ -6,3 +6,7 @@ ScheduleEntry::ScheduleEntry(const Teacher* pTeacher, const Classroom* pClassroo
 	, m_lecture(pLecture)
 {
 }
+
+ScheduleEntry::ScheduleEntry()
+{
+}

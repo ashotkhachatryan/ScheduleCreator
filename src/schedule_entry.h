@@ -8,6 +8,7 @@
 class ScheduleEntry
 {
 public:
+	ScheduleEntry();
 	ScheduleEntry(const Teacher* pTeacher, const Classroom* pClassroom, const Lecture* pLecture);
 private:
 	const Teacher* 		m_teacher;

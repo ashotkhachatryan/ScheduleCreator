@@ -2,9 +2,12 @@
 #include <assert.h>
 
 ScheduleDb* ScheduleDb::m_instance = nullptr;
+int ScheduleDb::DayCount = 5;
+int ScheduleDb::HourCount = 6;
 
 ScheduleDb::ScheduleDb()
 {
+	Initialize();
 }
 
 ScheduleDb*
@@ -37,27 +40,32 @@ ScheduleDb::GetClassroomsCount() const
 	return m_classrooms.size();
 }
 
-const std::vector<Teacher*>& 
+int
+ScheduleDb::GetTeachersCount() const
+{
+	assert(m_teachers.size() != 0);
+	return m_teachers.size();
+}
+
+const std::vector<Teacher*>
 ScheduleDb::GetTeachers() const
 {
+	assert(m_teachers.size() != 0);
 	return m_teachers;
 }
 
-const std::vector<Classroom*>& 
+const std::vector<Classroom*>
 ScheduleDb::GetClassrooms() const
 {
+	assert(m_classrooms.size() != 0);
 	return m_classrooms;
 }
 
-const std::vector<Lecture*>& 
+const std::vector<Lecture*>
 ScheduleDb::GetLectures() const
 {
+	assert(m_lectures.size() != 0);
 	return m_lectures;
-}
-
-std::map<Teacher*, Lecture*>
-ScheduleDb::GetTeacherLectureMapByClassroom(const Classroom* pClassroom) const
-{
 }
 
 void

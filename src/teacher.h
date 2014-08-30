@@ -25,6 +25,7 @@ public:
 	Teacher(std::string pName, int pId);
 	void SetTeacherEmployment(const std::vector<TeacherEmployment*> pTeacherEmployment);
 	std::vector<TeacherEmployment*> GetTeacherEmployment() const;
+	std::string GetName() const;
 private:
 	std::string m_name;
 	int m_id;

@@ -10,3 +10,21 @@ ScheduleEntry::ScheduleEntry(const Teacher* pTeacher, const Classroom* pClassroo
 ScheduleEntry::ScheduleEntry()
 {
 }
+
+const Teacher*
+ScheduleEntry::GetTeacher() const
+{
+	return m_teacher;
+}
+
+const Classroom*
+ScheduleEntry::GetClassroom() const
+{
+	return m_classroom;
+}
+
+const Lecture*
+ScheduleEntry::GetLecture() const
+{
+	return m_lecture;
+}

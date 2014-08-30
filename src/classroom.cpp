@@ -11,3 +11,9 @@ Classroom::GetId() const
 {
 	return m_id;
 }
+
+std::string
+Classroom::GetName() const
+{
+	return m_name;
+}

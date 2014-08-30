@@ -6,8 +6,11 @@
 class ScheduleTable
 {
 public:
+	std::vector<std::vector<ScheduleEntry>> operator() (int pIndex1);
+	std::vector<ScheduleEntry> operator() (int pIndex1, int pIndex2);
 	ScheduleEntry operator() (int pIndex1, int pIndex2, int pIndex3);
 	static ScheduleTable* GetInstance();
+	int GetEntryCountByClassroom(int pId);
 private:
 	ScheduleTable();
 	void Initialize();

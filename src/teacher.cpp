@@ -42,3 +42,9 @@ Teacher::GetTeacherEmployment() const
 {
 	return m_teacherEmployment;
 }
+
+std::string
+Teacher::GetName() const
+{
+	return m_name;
+}

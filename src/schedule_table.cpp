@@ -64,12 +64,37 @@ ScheduleTable::operator() (int pIndex1, int pIndex2, int pIndex3)
 }
 
 int
-ScheduleTable::GetEntryCountByClassroom(int pId)
+ScheduleTable::GetLectureCountInClassroom(int pId, const Lecture* pLecture) const
+{
+	int lSum = 0;
+	std::vector<std::vector<ScheduleEntry>> lClassroomTable = ScheduleEntryArray[pId];
+	for (int i = 0; i < lClassroomTable.size(); i++) {
+		for (int j = 0; j < lClassroomTable[i].size(); j++) {
+			if (lClassroomTable[i][j].GetLecture() == pLecture) {
+				lSum++;
+			}
+		}
+	}
+	return lSum;
+}
+
+int
+ScheduleTable::GetEntryCountByClassroom(int pId) const 
 {
 	std::vector<std::vector<ScheduleEntry>> lClassroomTable = ScheduleEntryArray[pId];
 	int lSum = 0;
 	for (int i = 0; i < lClassroomTable.size(); i++) {
 		lSum += lClassroomTable[i].size();
+	}
+	return lSum;
+}
+
+int
+ScheduleTable::GetAllEntriesCount() const
+{
+	int lSum = 0;
+	for (int i = 0; i < ScheduleEntryArray.size(); i++) {
+		lSum += GetEntryCountByClassroom(i);
 	}
 	return lSum;
 }

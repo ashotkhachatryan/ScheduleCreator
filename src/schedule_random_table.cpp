@@ -3,10 +3,16 @@
 #include "schedule_table.h"
 #include <algorithm>
 
-ScheduleRandomTable::ScheduleRandomTable()
+ScheduleRandomTable::ScheduleRandomTable(int pId)
+	: m_id(pId)
 {
-	srand(time(NULL));
 	Initialize();
+}
+
+std::vector<std::vector<std::vector<ScheduleEntry>>>
+ScheduleRandomTable::GetScheduleEntryArray() const
+{
+	return ScheduleEntryRandomArray;
 }
 
 std::vector<int>

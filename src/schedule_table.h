@@ -10,7 +10,9 @@ public:
 	std::vector<ScheduleEntry> operator() (int pIndex1, int pIndex2);
 	ScheduleEntry operator() (int pIndex1, int pIndex2, int pIndex3);
 	static ScheduleTable* GetInstance();
-	int GetEntryCountByClassroom(int pId);
+	int GetEntryCountByClassroom(int pId) const;
+	int GetAllEntriesCount() const;
+	int GetLectureCountInClassroom(int pId, const Lecture* pLecture) const;
 private:
 	ScheduleTable();
 	void Initialize();

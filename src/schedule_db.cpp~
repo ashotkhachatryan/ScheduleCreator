@@ -68,29 +68,28 @@ ScheduleDb::GetLectures() const
 	return m_lectures;
 }
 
-
 void
 ScheduleDb::ClassroomInitialize()
 {
 	m_classrooms.push_back(new Classroom("X", 		0));
 	m_classrooms.push_back(new Classroom("IX", 		1));
-	m_classrooms.push_back(new Classroom("VIII", 	2));
-	m_classrooms.push_back(new Classroom("VII", 	3));
-	m_classrooms.push_back(new Classroom("VI", 		4));
+//	m_classrooms.push_back(new Classroom("VIII", 	2));
+//	m_classrooms.push_back(new Classroom("VII", 	3));
+//	m_classrooms.push_back(new Classroom("VI", 		4));
 }
 
 void
 ScheduleDb::LectureInitialize()
 {
   m_lectures.push_back(new Lecture("Հայոց Լեզու", 0));
-  m_lectures.push_back(new Lecture("Ֆիզիկա", 1));
-  m_lectures.push_back(new Lecture("Մաթեմատիկա", 2));
-  m_lectures.push_back(new Lecture("Կենսաբանություն", 3));
-  m_lectures.push_back(new Lecture("Աշխարհագրություն", 4));
-  m_lectures.push_back(new Lecture("Պատմություն", 5));
-  m_lectures.push_back(new Lecture("Ֆիզկուլտուրա", 6));
-  m_lectures.push_back(new Lecture("Գրականություն", 7));
-  m_lectures.push_back(new Lecture("Ռուսաց լեզու", 8));
+  m_lectures.push_back(new Lecture("Ռուսերեն", 1));
+  m_lectures.push_back(new Lecture("Պատմություն", 2));
+  m_lectures.push_back(new Lecture("Ֆիզկուլտուրւրա", 3));
+  m_lectures.push_back(new Lecture("Քիմիա", 4));
+  m_lectures.push_back(new Lecture("Կենսաբանություն", 5));
+  m_lectures.push_back(new Lecture("Մաթեմատիկա", 6));
+  m_lectures.push_back(new Lecture("Ֆիզիկա", 7));
+  m_lectures.push_back(new Lecture("Գրականություն", 8));
 	m_lectures.push_back(new Lecture("Անգլերեն", 9));
 
 }
